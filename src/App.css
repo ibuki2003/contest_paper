@@ -1,38 +1,110 @@
-.App {
+@media print {
+  #config {
+    display: none;
+  }
+  h1 {
+    display: none;
+  }
+}
+
+#config {
+  padding: 1em;
+}
+
+#pages {
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.page {
+  border: 1px solid black;
+  width: 30rem;
+  height: 20rem;
+  margin: 1rem;
+  font-size: 0.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+@media print {
+  .page {
+    font-size: 1em;
+    page-break-after: always;
+    border: none;
+    margin: 0;
+    width: 100%;
+    height: calc(100vw / 1.5);
+  }
+  .page.hidden {
+    display: none;
+  }
+}
+
+.page .preview { display: none; }
+
+@media print {
+  .page .preview { display: unset; }
+  .page textarea { display: none !important; }
+  .page input { display: none !important; }
+}
+
+
+.container {
+  margin: 0 auto;
+  /* border: 1px solid black; */
+
+  width: 90%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: bold;
+  background-color: #ccc;
+  margin: 0.5em;
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.row {
+  width: 100%;
+  flex-grow: 1;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+}
+.row .ranges, .row .note {
+  height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.row div {
+  flex: 3;
+  text-align: left;
+}
+.row div p {
+  margin: 0;
+  height: 2em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.row textarea {
+  height: 100%;
+  width: 90%;
+}
+
+.page .footer input {
+  display: inline-block;
+  width: 5em;
+  margin-left: .5em;
+}
+
+tr > td:first-child {
+  width: 20%;
 }
