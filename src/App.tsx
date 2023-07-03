@@ -221,6 +221,7 @@ function App() {
     <div className="App">
       <h1>Contest bands paper designer</h1>
       <section id="config">
+        <p><a href="https://github.com/ibuki2003/contest_paper/">GitHub: github.com/ibuki2003/contest_paper</a></p>
         <p><input type="text" placeholder="JA1ZLO/1" value={myCall} onChange={(e) => setMyCall(e.target.value)} /></p>
         <p><input type="text" placeholder="10 P" value={myNr} onChange={(e) => setMyNr(e.target.value)} /></p>
         <textarea value={configJson} onChange={(e) => setConfigJson(e.target.value)} />
