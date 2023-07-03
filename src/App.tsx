@@ -219,7 +219,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Contest bands paper designer</h1>
+      <h1>コンテスト紙メーカー</h1>
       <section id="config">
         <p><a href="https://github.com/ibuki2003/contest_paper/">GitHub: github.com/ibuki2003/contest_paper</a></p>
         <p><input type="text" placeholder="JA1ZLO/1" value={myCall} onChange={(e) => setMyCall(e.target.value)} /></p>
