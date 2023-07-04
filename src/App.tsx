@@ -214,7 +214,7 @@ function App() {
 
   const [configJson, setConfigJson] = React.useState(() => JSON.stringify({myCall, myNr, bands}, null, 2));
   React.useEffect(() => {
-    setConfigJson(JSON.stringify({myCall, myNr, bands}, null, 2));
+    setConfigJson(JSON.stringify({myCall, myNr, bands}));
   }, [myCall, myNr, bands]);
 
   return (
