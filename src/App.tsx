@@ -166,14 +166,14 @@ const initial_bands: { [key in BandName]: BandInfo } = {
   },
   "2400M": {
     ranges: `
-      ALL: 2424.000 - 2424.500
+      ALL: 2427.000 - 2450.000
     `,
     note: `
     `,
   },
   "5600M": {
     ranges: `
-      ALL: 5760.00 - 5762.00
+      ALL: 5757.000 - 5760.000
     `,
     note: `
       呼出: 5760.000
